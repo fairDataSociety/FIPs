@@ -84,10 +84,9 @@ beforehand, to ascertain that the RFC may be desirable; having a consistent
 impact on the project requires concerted effort toward consensus-building.
 
 The most common preparations for writing and submitting an RFC include talking
-the idea over on our [official Zulip server], discussing the topic on our
-[developer discussion forum], and occasionally posting "pre-RFCs" on the
-developer forum. You may file issues on this repo for discussion, but these are
-not actively looked at by the teams.
+the idea over on our [TBD], discussing the topic on our
+[Github Discussions], and occasionally posting "pre-RFCs" on the
+developer forum. 
 
 As a rule of thumb, receiving encouraging feedback from long-standing project
 developers, and particularly members of the relevant [sub-team] is a good
@@ -276,7 +275,7 @@ These documents were derived heavily from the [Rust RFC](https://github.com/rust
 
 
 
-[official Zulip server]: https://rust-lang.zulipchat.com/
+[Github Discussions]: https://github.com/fairDataSociety/fds-rfcs/discussions
 [developer discussion forum]: https://internals.rust-lang.org/
 [RFC repository]: https://github.com/rust-lang/rfcs
 [sub-team]: https://www.rust-lang.org/team.html
