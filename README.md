@@ -270,6 +270,16 @@ at your option. Some parts of the repository are already licensed according to t
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
 
 
+
+### History / Acknowledgement
+
+[ History ] : #history
+
+These documents were derived heavily from the [Rust RFC](https://github.com/rust-lang/rfcs).  In many places text was simply copied and modified. The original authors are not responsible for its use in the FDS RFC process , and should not be bothered with technical questions specific to FDS RFCs. Please direct all comments to the FDS RFC editors.
+
+
+
+
 [official Zulip server]: https://rust-lang.zulipchat.com/
 [developer discussion forum]: https://internals.rust-lang.org/
 [RFC repository]: https://github.com/rust-lang/rfcs
