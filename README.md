@@ -96,9 +96,9 @@ indication that the RFC is worth pursuing.
 ## What the process is
 [What the process is]: #what-the-process-is
 
-In short, to get a major feature added to Rust, one must first get the RFC
+In short, to get a major change accepted to FDS, one must first get the RFC
 merged into the RFC repository as a markdown file. At that point the RFC is
-"active" and may be implemented with the goal of eventual inclusion into Rust.
+"active" and may be implemented with the goal of eventual inclusion into FDS and its tooling.
 
   - Fork the RFC repo [RFC repository]
   - Copy `0000-template.md` to `text/0000-my-feature.md` (where "my-feature" is
@@ -149,7 +149,7 @@ merged into the RFC repository as a markdown file. At that point the RFC is
     in full depth.
   - The FCP lasts ten calendar days, so that it is open for at least 5 business
     days. It is also advertised widely,
-    e.g. in [This Week in Rust](https://this-week-in-rust.org/). This way all
+    e.g. in [TBD](TBD). This way all
     stakeholders have a chance to lodge any final objections before a decision
     is reached.
   - In most cases, the FCP period is quiet, and the RFC is either merged or
@@ -276,6 +276,5 @@ These documents were derived heavily from the [Rust RFC](https://github.com/rust
 
 
 [Github Discussions]: https://github.com/fairDataSociety/fds-rfcs/discussions
-[developer discussion forum]: https://internals.rust-lang.org/
-[RFC repository]: https://github.com/rust-lang/rfcs
-[sub-team]: https://www.rust-lang.org/team.html
+[RFC repository]: https://github.com/fairDataSociety/fds-rfcs
+[sub-team]: TBD
