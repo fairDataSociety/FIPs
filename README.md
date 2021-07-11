@@ -63,11 +63,10 @@ the RFC process, it may be closed with a polite request to submit an RFC first.
 [Sub-team specific guidelines]: #sub-team-specific-guidelines
 
 For more details on when an RFC is required for the following areas, please see
-the Rust community's [sub-team] specific guidelines for:
+the FDS community's [sub-team] specific guidelines for:
 
-  - [language changes](lang_changes.md),
-  - [library changes](libs_changes.md),
-  - [compiler changes](compiler_changes.md).
+  - [Fairdrive protocol changes](fairdrive_protocol_changes.md),
+  - [FDS quality requirements changes](fds_quality_requirements_changes.md).
 
 
 ## Before creating an RFC
