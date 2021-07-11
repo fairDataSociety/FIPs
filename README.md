@@ -160,14 +160,14 @@ merged into the RFC repository as a markdown file. At that point the RFC is
 [The RFC life-cycle]: #the-rfc-life-cycle
 
 Once an RFC becomes "active" then authors may implement it and submit the
-feature as a pull request to the Rust repo. Being "active" is not a rubber
+feature as a pull request to the FDS repos. Being "active" is not a rubber
 stamp, and in particular still does not mean the feature will ultimately be
 merged; it does mean that in principle all the major stakeholders have agreed
 to the feature and are amenable to merging it.
 
 Furthermore, the fact that a given RFC has been accepted and is "active"
 implies nothing about what priority is assigned to its implementation, nor does
-it imply anything about whether a Rust developer has been assigned the task of
+it imply anything about whether an FDS developer has been assigned the task of
 implementing the feature. While it is not *necessary* that the author of the
 RFC also write the implementation, it is by far the most effective way to see
 an RFC through to completion: authors should not expect that other project
