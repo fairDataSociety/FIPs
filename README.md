@@ -17,7 +17,7 @@ tooling is evolving in.
 ## Table of Contents
 [Table of Contents]: #table-of-contents
 
-  - [Opening](#rust-rfcs)
+  - [Opening](#fds-rfcs)
   - [Table of Contents]
   - [When you need to follow this process]
   - [Sub-team specific guidelines]
@@ -36,16 +36,14 @@ tooling is evolving in.
 [When you need to follow this process]: #when-you-need-to-follow-this-process
 
 You need to follow this process if you intend to make "substantial" changes to
-Rust, Cargo, Crates.io, or the RFC process itself. What constitutes a
+Fairdrive stack, other FDS tooling, qualitative requirements for FDS tooling, or the RFC process itself. What constitutes a
 "substantial" change is evolving based on community norms and varies depending
 on what part of the ecosystem you are proposing to change, but may include the
 following.
 
-  - Any semantic or syntactic change to the language that is not a bugfix.
-  - Removing language features, including those that are feature-gated.
-  - Changes to the interface between the compiler and libraries, including lang
-    items and intrinsics.
-  - Additions to `std`.
+  - Any semantic or syntactic change to the Fairdrive stack that is not a bugfix.
+  - Adding features or changing interfaces for the Fairdrive protocol.
+  - Changes to the requirements for documentation standards for FDS tooling.
 
 Some changes do not require an RFC:
 
@@ -54,10 +52,10 @@ Some changes do not require an RFC:
   - Additions that strictly improve objective, numerical quality criteria
     (warning removal, speedup, better platform coverage, more parallelism, trap
     more errors, etc.)
-  - Additions only likely to be _noticed by_ other developers-of-rust,
-    invisible to users-of-rust.
+  - Additions only likely to be _noticed by_ other developers-of-FDS,
+    invisible to users-of-FDS.
 
-If you submit a pull request to implement a new feature without going through
+If you submit a pull request to implement a change without going through
 the RFC process, it may be closed with a polite request to submit an RFC first.
 
 
