@@ -208,9 +208,9 @@ rationale for the decision.
 Some accepted RFCs represent vital features that need to be implemented right
 away. Other accepted RFCs can represent features that can wait until some
 arbitrary developer feels like doing the work. Every accepted RFC has an
-associated issue tracking its implementation in the Rust repository; thus that
+associated issue tracking its implementation in the FDS repositories; thus that
 associated issue can be assigned a priority via the triage process that the
-team uses for all issues in the Rust repository.
+team uses for all issues in the FDS repositories.
 
 The author of an RFC is not obligated to implement it. Of course, the RFC
 author (like any other developer) is welcome to post an implementation for
