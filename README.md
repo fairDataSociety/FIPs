@@ -22,13 +22,13 @@ and controlled path for new features to enter the FDS tooling, so that all stake
   - [Sub-team specific guidelines](#sub-team-specific-guidelines)
   - [Before creating an RFC](#before-creating-an-rfc)
   - [What the process is](#what-the-process-is)
-  - [The RFC life-cycle]
-  - [Reviewing RFCs]
-  - [Implementing an RFC]
-  - [RFC Postponement]
-  - [Help this is all too informal!]
-  - [License]
-  - [Contributions]
+  - [The RFC life-cycle](#the-rfc-life-cycle)
+  - [Reviewing RFCs](#reviewing-rfcs )
+  - [Implementing an RFC](#implementing-an-rfc )
+  - [RFC Postponement](#rfc-postponement )
+  - [Help this is all too informal!](#help-this-is-all-too-informal)
+  - [License](#license )
+  - [Contributions](#contributions )
 
 
 ## When you need to follow this process
