@@ -82,7 +82,7 @@ A hastily-proposed RFC can hurt its chances of acceptance. Low quality proposals
 
 Although there is no single way to prepare for submitting an RFC, it is generally a good idea to pursue feedback from other project developers beforehand, to ascertain that the RFC may be desirable; having a consistent impact on the project requires concerted effort toward consensus-building. 
 
-The most common preparations for writing and submitting an RFC include talking the idea over on our [TBD], discussing the topic on our [Github Discussions], and occasionally posting "pre-RFCs" on the developer forum. 
+The most common preparations for writing and submitting an RFC include talking the idea over on [TBD], discussing the topic on our [Github Discussions](https://github.com/fairDataSociety/fds-rfcs/discussions), and occasionally posting "pre-RFCs" on the developer forum. 
 
 As a rule of thumb, receiving encouraging feedback from long-standing project developers, and particularly members of the relevant [sub-team] is a good indication that the RFC is worth pursuing.
 
