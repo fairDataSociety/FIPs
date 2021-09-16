@@ -1,4 +1,4 @@
-- FIP: 0000
+- FIP: 0
 - title: RFC process definition
 - author: Črt Ahlin (@crtahlin)
 - status: draft
