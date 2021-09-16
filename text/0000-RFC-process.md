@@ -200,3 +200,7 @@ Usually an RFC pull request marked as "postponed" has already passed an informal
 [Help this is all too informal!]: #help-this-is-all-too-informal
 
 The process is intended to be as lightweight as reasonable for the present circumstances. As usual, we are trying to let the process be driven by consensus and community norms, not impose more structure than necessary.
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
