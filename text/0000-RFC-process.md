@@ -59,8 +59,6 @@ Some changes do not require an RFC:
   - Additions that strictly improve objective, numerical quality criteria
     (warning removal, speedup, better platform coverage, more parallelism, trap
     more errors, etc.).
-  - Additions only likely to be _noticed by_ other developers-of-FDS,
-    invisible to users-of-FDS.
 
 If you submit a pull request to implement a change without going through the RFC process, it may be closed with a polite request to submit an RFC first.
 
