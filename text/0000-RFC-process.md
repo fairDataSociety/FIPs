@@ -72,8 +72,8 @@ If you submit a pull request to implement a change without going through the RFC
 For more details on when an RFC is required for the following areas, please see
 the FDS community's [sub-team] specific guidelines for:
 
-  - [Fairdrive protocol changes](fairdrive_protocol_changes.md),
-  - [FDS quality requirements changes](fds_quality_requirements_changes.md).
+  - [Fairdrive protocol changes](../fairdrive_protocol_changes.md),
+  - [FDS quality requirements changes](../fds_quality_requirements_changes.md).
 
 
 ## Before creating an RFC
