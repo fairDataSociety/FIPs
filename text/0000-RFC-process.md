@@ -1,8 +1,8 @@
-- Feature Name: RFC process definition
-- Start Date: 2021-09-09
-- RFC PR: NA 
-- Issue: NA
-- Status: DRAFT
+- FIP: 0000
+- title: RFC process definition
+- author: Črt Ahlin (@crtahlin)
+- status: draft
+- created: 2021-09-09
 
 # Summary
 [summary]: #summary
