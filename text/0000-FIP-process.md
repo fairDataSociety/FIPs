@@ -63,11 +63,17 @@ The acceptance of a FIP is achieved by its merge into the FIP repository as a ma
     - It the discussion preceding the FCP was lengthy, the motion could be preceded by a "summary comment" of the current state of discussion and major points of disagreement.
     - To enter the FCP, **all** the members of the sub-team must agree.
 11. The FCP phase lasts **10** calendar days. It is advertised widely, for all the stakeholders to have a chance to lodge objections. 
-12. The FIP can then be either merged, closed, postponed or if substantial new arguments or ideas are raised, the FCP can be canceled and the FIP goes back into discussion.
+12. The FIP can then be either merged, closed, postponed or if substantial new arguments or ideas are raised, the FCP can be canceled and the FIP goes back into discussion. A merged FIP becomes "active".
 
 
 
 ## The FIP life-cycle
 
+After the FIP becomes active, it might get implemented in a reference implementation, though there is no guarantee of that. 
 
+In general, FIPs should not be substantially changed after becoming active, though minor changes can be submitted as amendments. Substantial changes should be new FIPs, with a note and status of being superseded added to the original FIP. What constitutes a substantial change is up to the discretion of the sub-team. 
+
+The whole process before a FIP becoming active and afterwards is represented by the diagram below.
+
+![image-20210917180503405](C:\Users\Crt\AppData\Roaming\Typora\typora-user-images\image-20210917180503405.png)
 
