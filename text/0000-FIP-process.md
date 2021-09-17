@@ -18,7 +18,9 @@ Some non-substantial changes to Fairdrive protocol can be managed through a GitH
 
 Substantial changes must be put through a design process and build a consensus among the Fair Data Society community and sub-teams handling a particular area.
 
-The Fairdrive improvement proposal (FIP) process is intended to provide a path for new specifications and features to be added to the Fairdrive protocol. This should increase confidence of all the stakeholders of the direction the Fairdrive protocol evolution.
+The Fairdrive improvement proposal (FIP) process is intended to provide a path for new specifications and features to be added to the Fairdrive protocol (FDP). This should increase confidence of all the stakeholders of the direction the Fairdrive protocol evolution.
+
+
 
 ## When to follow the FIP process
 
