@@ -47,3 +47,27 @@ As a rule of thumb, receiving encouraging feedback from long-standing project de
 
 ## The FIP process
 
+The acceptance of a FIP is achieved by its merge into the FIP repository as a markdown file. At that point the FIP becomes active. 
+
+1. Fork the [FIP repository](https://github.com/fairDataSociety/fds-rfcs/).
+2. Copy `0000-template.md` to `text/0000-my-feature.md` (where "my-feature" is descriptive). Don't assign a FIP number yet.
+3. Fill in the FIP. Take care to be convincing in the motivation part and  understanding of the proposed design and its impact and drawbacks. 
+4. Submit a pull request (PR). 
+5. Use the pull request number to change the `0000-`prefix of file and it's internal header to the PR number.
+6. The pull request will be assigned to the relevant sub-team to triage it and assign it to a particular member.
+7. Before being accepted, you should be prepared to revise the FIP and incorporate feedback from various stakeholders. Build consensus and integrate feedback, try to gain broad support. 
+8. The relevant sub-team will use the PR comment thread to discuss or summarize the discussion around the FIP. 
+9. You can make edits to the PR, make changes as new commits and leave comments explaining them. Specifically, do not squash or rebase commits after they are visible on the pull request.
+10. At some point, a member of the subteam will propose a "motion for final comment period" (FCP), along with a *disposition* for the FIP (merge, close, or postpone).
+    - This happens when the sub-team is in the position to make a decision. Consensus among all the stakeholders involved in the feedback is not needed, but strong opposition against the FIP outside of the sub-team should not exist. Sub-team members use their best judgement when to take this step.
+    - It the discussion preceding the FCP was lengthy, the motion could be preceded by a "summary comment" of the current state of discussion and major points of disagreement.
+    - To enter the FCP, **all** the members of the sub-team must agree.
+11. The FCP phase lasts **10** calendar days. It is advertised widely, for all the stakeholders to have a chance to lodge objections. 
+12. The FIP can then be either merged, closed, postponed or if substantial new arguments or ideas are raised, the FCP can be canceled and the FIP goes back into discussion.
+
+
+
+## The FIP life-cycle
+
+
+
