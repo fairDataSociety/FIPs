@@ -77,3 +77,26 @@ The whole process before a FIP becoming active and afterwards is represented by 
 
 ![image-20210917180503405](C:\Users\Crt\AppData\Roaming\Typora\typora-user-images\image-20210917180503405.png)
 
+## Reviewing FIPs
+
+When the FIP is in the pull request phase, the sub-team may meet the author and/or relevant stakeholders to discuss the proposal. A summary of the discussions should be posted to the pull request.
+
+Final decisions by the sub-team are made after the benefits and drawbacks are well understood. If the reasoning is not clear from the thread in the PR, the sub-team will add a comment describing the rationale.
+
+
+
+## Implementing a FIP
+
+The author of the FIP is not obligated to implement it. Anyone can pick up on an implementation of a FIP, as a reference implementation. If implemented as such, a FIP is added a note and its status changes to implemented.
+
+
+
+## FIP postponement
+
+A FIP marked as postponed might not have been relevant at the time of discussion, but might be at a later time. Postponed pull request may be opened when the time is right. Relevant sub-team members should be contacted about that. 
+
+
+
+## Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
