@@ -35,3 +35,15 @@ Example of substantial change might be:
 
 
 
+## Before creating a FIP
+
+Low quality proposals or those for features already rejected or that do not fit into the roadmap, will be rejected. Therefore, before submitting a FIP, pursue feedback from community and stakeholders in general. To go through the process smoothly, work will have to be done towards building a consensus. 
+
+The idea for the FIP could be talked over on the [Fair Data Society Discord](https://discord.gg/KrVTmahcUA), discussing the topic on [GitHub Discussions](https://github.com/fairDataSociety/fds-rfcs/discussions), or even posting "pre-FIPs" on one of the channels.
+
+As a rule of thumb, receiving encouraging feedback from long-standing project developers, and particularly members of the relevant sub-team is a good indication that the FIP is worth pursuing.
+
+
+
+## The FIP process
+
