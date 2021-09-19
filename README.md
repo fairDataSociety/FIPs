@@ -5,7 +5,7 @@ For the process of submitting Fairdrive Improvement Proposals, please refer to t
 ## Sub-teams
 Sub-teams are responsible for particular areas of the FIPs. Information for specific sub-teams is available in separate files.
 
-- [Fairdrive protocol sub-team](./fairdrive_protocol_changes-md)
+- [Fairdrive protocol sub-team](./fairdrive_protocol_changes.md)
 
 
 ## License
