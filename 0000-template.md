@@ -8,25 +8,19 @@
 One paragraph explanation of the proposal.
 
 # Context and motivation
-Explain the context and background for the propsal, motivation for the proposal and what it addresses with some use cases and the expected outcome.
+Explain the context and background for the proposal, motivation for the proposal and what it addresses with some use cases and the expected outcome.
 
 # Guide-level explanation
+Explain the proposal as if it was already implemented, including:
 
-
-
-
-Explain the proposal as if it was already included in the language and you were teaching it to another FDS programmer. That generally means:
-
-- Introducing new named concepts.
-- Explaining the feature largely in terms of examples.
-- Explaining how FDS programmers should *think* about the feature, and how it should impact the way they use FDS tooling. It should explain the impact as concretely as possible.
-- If applicable, provide sample error messages, deprecation warnings, or migration guidance.
-- If applicable, describe the differences between teaching this to existing FDS programmers and new FDS programmers.
-
-For implementation-oriented RFCs (e.g. for Fairdrive protocol), this section should focus on how Fairdrive protocol contributors should think about the change, and give examples of its concrete impact. For policy RFCs, this section should provide an example-driven introduction to the policy, and explain its impact in concrete terms.
+- explain terms and concepts,
+- explain features/ideas with examples,
+- explain what kind of impact the proposal will have on other areas (e.g. other proposals)
 
 # Reference-level explanation
-[reference-level-explanation]: #reference-level-explanation
+Technical explanation that explains the design in sufficient detail that interaction with other systems is clear and it is reasonably clear how it would get implemented. Corner case should be covered with examples.
+
+------
 
 This is the technical portion of the RFC. Explain the design in sufficient detail that:
 
@@ -37,16 +31,10 @@ This is the technical portion of the RFC. Explain the design in sufficient detai
 The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
 
 # Drawbacks
-[drawbacks]: #drawbacks
-
-Why should we *not* do this?
+What are the drawbacks of the design?
 
 # Rationale and alternatives
-[rationale-and-alternatives]: #rationale-and-alternatives
-
-- Why is this design the best in the space of possible designs?
-- What other designs have been considered and what is the rationale for not choosing them?
-- What is the impact of not doing this?
+Why was the design chosen from all possible designs, despite drawbacks and why were some others not chosen?
 
 # Prior art
 Discuss what prior art exists in relation to the FIP. This shows the author has studied the field and also informs the readers of the state of affairs.
