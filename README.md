@@ -2,6 +2,11 @@
 
 For the process of submitting Fairdrive Improvement Proposals, please refer to the [genesis FIP](./text/0000-FIP-process.md).
 
+## Sub-teams
+Sub-teams are responsible for particular areas of the FIPs. Information for specific sub-teams is available in separate files.
+
+- [Fairdrive protocol sub-team](./fairdrive_protocol_changes-md)
+
 
 ## License
 This repository is currently licensed under CC0 1.0 Universal license - [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
