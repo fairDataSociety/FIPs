@@ -4,19 +4,13 @@ For the process of submitting Fairdrive Improvement Proposals, please refer to t
 
 
 ## License
-[License]: #license
-
 This repository is currently licensed under CC0 1.0 Universal license - [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 
 ### Contributions
-[Contributions]: #contributions
-
 Any contribution intentionally submitted for inclusion in the work by you, shall be licensed as above, without any additional terms or conditions.
 
 ### History / Acknowledgement
-
-[ History ] : #history
 
 These documents were derived heavily from the [Rust RFC](https://github.com/rust-lang/rfcs). The original authors are not responsible for its use in the FIP process , and should not be bothered with technical questions specific to FIPs. Please direct all comments to the FIP editors.
 
