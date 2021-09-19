@@ -5,17 +5,15 @@
 - created: (yyyy-mm-dd)
 
 # Summary
-[summary]: #summary
+One paragraph explanation of the proposal.
 
-One paragraph explanation of the feature/change.
-
-# Motivation
-[motivation]: #motivation
-
-Why are we doing this? What use cases does it support? What is the expected outcome?
+# Context and motivation
+Explain the context and background for the propsal, motivation for the proposal and what it addresses with some use cases and the expected outcome.
 
 # Guide-level explanation
-[guide-level-explanation]: #guide-level-explanation
+
+
+
 
 Explain the proposal as if it was already included in the language and you were teaching it to another FDS programmer. That generally means:
 
@@ -75,25 +73,9 @@ Note that while precedent set by other projects is some motivation, it does not 
 - What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
 
 # Future possibilities
-[future-possibilities]: #future-possibilities
+Explain how you see the proposal could change in the future. You can list things that might be out of scope of the proposal but you see might be needed in the future or are just in the idea phase at the moment.
 
-Think about what the natural extension and evolution of your proposal would
-be and how it would affect the language and project as a whole in a holistic
-way. Try to use this section as a tool to more fully consider all possible
-interactions with the project and language in your proposal.
-Also consider how this all fits into the roadmap for the project
-and of the relevant sub-team.
-
-This is also a good place to "dump ideas", if they are out of scope for the
-RFC you are writing but otherwise related.
-
-If you have tried and cannot think of any future possibilities,
-you may simply state that you cannot think of anything.
-
-Note that having something written down in the future-possibilities section
-is not a reason to accept the current or a future RFC; such notes should be
-in the section on motivation or rationale in this or subsequent RFCs.
-The section merely provides additional information.
+This section could also be left blank. 
 
 ## Copyright
 
