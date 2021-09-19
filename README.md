@@ -13,9 +13,3 @@ Any contribution intentionally submitted for inclusion in the work by you, shall
 ### History / Acknowledgement
 
 These documents were derived heavily from the [Rust RFC](https://github.com/rust-lang/rfcs). The original authors are not responsible for its use in the FIP process , and should not be bothered with technical questions specific to FIPs. Please direct all comments to the FIP editors.
-
-
-
-
-[Github Discussions]: https://github.com/fairDataSociety/fds-rfcs/discussions
-[RFC repository]: https://github.com/fairDataSociety/fds-rfcs
