@@ -66,11 +66,11 @@ Note that while precedent set by other projects is some motivation, it does not 
 
 
 # Unresolved questions
-[unresolved-questions]: #unresolved-questions
+Address what:
 
-- What parts of the design do you expect to resolve through the RFC process before this gets merged?
-- What parts of the design do you expect to resolve through the implementation of this feature before stabilization?
-- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
+- parts of design need to be resolved as part of the FIP process,
+- parts of design need to be resolved through implementation process,
+- parts are out of scope of the FIP to be resolved.
 
 # Future possibilities
 Explain how you see the proposal could change in the future. You can list things that might be out of scope of the proposal but you see might be needed in the future or are just in the idea phase at the moment.
