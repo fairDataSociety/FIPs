@@ -1,5 +1,5 @@
 - FIP: (Number, to be assigned)
-- title: FDP Roadmap
+- title: Fairdrive Protocol Roadmap
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
 - created: 2021-10-05
@@ -7,7 +7,7 @@
 # Summary
 <!-- One paragraph explanation of the feature/change. -->
 
-A roadmap of the Fair Data Protocol for the upcoming developments and proposals.
+A roadmap of the Fairdrive Protocol (FDP) for the upcoming developments and proposals.
 
 # Context and motivation
 <!-- Why are we doing this? What use cases does it support? What is the expected outcome? -->
@@ -32,33 +32,33 @@ Web3 is decentralised and domainless, where the user posesses all their personal
 In order to facilitate creating decentralised applications (dApps), web3 primitives and common protocols have to be set and loaded.
 
 The foundation of such an environment consists of
-- commonly used data-structures, that gives opportunity dApps to interpret the produced data of another dApp; and also allows for users to easily transfer their data from one application to another,
+- commonly used data-structures, that give opportunity for a dApp to interpret the produced data of another dApp; and also allows for users to easily transfer their data from one application to another,
 - well defined Personal Data structure, that employes the protocolised data-structures and has a clear mapping to any particular data within the user-namespace,
 - uniform addressing of resources such as users, dApps or content,
 - instantly accessible global decentralised storage of users, dApps or data-structures, that only provides meta-information how to retrieve or interact with the entity in question,
 - dApp environment and its workflow especially regarding to authentication, authorization and interaction with the personal data of users,
 - web3 backend service architectures that substitue the serverside of web2 that aggregate on shared data and serve users in a reliable and flexible fashion.
 
-Even though web3 has a great potential to emerge new use-cases and business modells, lack of these ingredients makes the implementation of dApps impossible or at least really slow, uneffective and cumbersome.
+Even though web3 has a great potential to emerge new use-cases and business models, lack of these ingredients makes the implementation of dApps impossible or at least really slow, uneffective and cumbersome.
 
-With the proposed components, it is possible to build full-featured web3 applications that can utilize data of another dApps and aggregate on it.
+With the proposed components, it is possible to build full-featured web3 applications that can utilize data of other dApps and aggregate on it.
 Because of this, new dApps might have a huge amount of data that they can start with.
 For example, one dApp has data about a user who bought tickets for concerts and other dApp can make suggestions for listening new type of bands based on that - of course, if the user gives the permission to the dApp to read this personal data.
 
 Also, it plants the seed for new type of data-economics, where the user can share their valuable data with dApps for service or monetisation, which is a great deal for both sides.
 Here, it has to emphasized, the data in question is not binded to any real person and the shared data is well-boundered with a strict structure what it contains.
 
-Nevertheless, the data that the user wants sell can be junk, but in a structure.
-The data in Fair Data Protocol offered data-structures has content address that can be signed by dApps in case of the data is really valueable.
+Nevertheless, the data that the user wants share can be junk, but in a structure.
+The data in Fairdrive Protocol offered data-structures has content address that can be signed by dApps in case of the data is really valueable.
 DApps have their own storage space that is similar to the user's, where they can put these signatures.
 
 It creates a reputation-based data-market, where 
-- users can obtain these signatures from the storage-space of dApps and resell their own data for other dApps.
-- dApps can sell their user-interaction produced data for other dApps.
+- users can obtain these signatures from the storage-space of dApps and reshare their own data for other dApps.
+- dApps can share their user-interaction produced data for other dApps.
 
 Many things are related to these points.
-First, not all user-interaction produced data can be sold, because a big portion of that has to be readable by other users, therefore it is unencrypted.
-On the other side, dApps have a trade-off about how much data they put into the common for reputation or just sell it.
+First, not all user-interaction produced data can be shared, because a big portion of that has to be readable by other users, therefore being unencrypted.
+On the other side, dApps have a trade-off about how much data they put into the common use for reputation or just sell it.
 The data in question can be a collection of user-public keys with the user's handled data-structures or else.
 The reputation is good for incorporating with other dApps and can be an essential element of other dApps that based on that.
 Eventually, it can yield a situation where dApps that share data the most will be the base layer of the web3 ecosystem and dApps built on those will be in the interest of keeping those alive. 
@@ -66,11 +66,11 @@ Moreover, the aggregation on reputation-friendly dApps is fully automatic, becau
 
 Thereby, starting a dApp development will be more appealing than developing a web2 application, because
 - new business-model/market which is flexible,
-- commonly used data-structures provide interface between applications, and dApps have a huge advantage at start with the available public data.
+- commonly used data-structures provide interface between applications, and dApps have a huge advantage at start with the available public data;
 - there is no single point of failure,
 - automatic scaling,
 - serverless,
-- it is DDoS resiliante,
+- it is DDoS resiliant,
 - cheaper to maintain than a cloud environment,
 - and censorship-resistant.
 
@@ -79,10 +79,10 @@ For a user, the most appealing may be:
 - anonymity,
 - generate income with internet-usage,
 - global account and data handling accross dApps which 
-  - encourage dApps to keep high quality and fair services that yield more convenient UX,
+  - encourage dApps to keep high quality and fair services that yield more convenient ueser experience,
   - single sign on to the internet.
 
-None of the milestones cab be fully finished, but they can provide usable libraries, executables, interfaces and ground base for other protocols and ideas.
+None of the milestones, explained in the next sections, cab be fully finished, but they can provide usable libraries, executables, interfaces and ground base for other protocols and ideas.
 
 # Reference-level explanation
 
@@ -102,7 +102,7 @@ The last planned step is more about integrations with other P2P and web3 systems
 Each milestone has _products_ that implements the proposals of the milestone in question. 
 When products are launched, it is a sign of preparation for the next milestone.
 However, there are no problem areas that can be closed that the milestone targets, as these can be reconsidered later (such as the permitting workflow).
-On the other hand, milestones can be completed when first versions of all planned _products_ have been released. 
+On the other hand, milestones can be considered completed when first versions of all planned _products_ have been released. 
 
 ### Milestone I. - Reviews with Protocolisation
 
@@ -114,7 +114,7 @@ In the first step, FairOS components and business-logic have to be _reviewed_ an
 The required components of FairOS for the first milestone are:
 - feeds topic conventions: how FairOS slices the user-namespace up, 
 - POD data structure: iNode-like file representation,
-- account handling: how the user profiles are handled in FairOS
+- account handling: how the user profiles are handled in FairOS.
 
 Along with FairOS outsourcing, the general interpretation and structure of common datasets has to be considered as well.
 For that, there are already existing solutions such as [JSON-LD](https://json-ld.org/), but the proposal that addresses this issue also can come up with own solution.
@@ -142,7 +142,7 @@ Smart contract types to be addressed are:
 - dApp Store: metadata about how user-agents can fetch the freshest application-state,
 - user registry: basic username -> public key mapping that is used to perform Diffie-Hellman key exchanges and else,
 - blob interface database: the public data-structures have to be available on demand as well, not only via proposals. 
-Thereby, there are going to be fully supported data-structures that came out from proposals and arbitrary ones that dApp developers can registrate.
+Thereby, there are going to be fully supported data-structures that came out from proposals and arbitrary ones that dApp developers can register.
 
 Some other dependencies and standards have to be tackled also such as:
 - addressing specifications: how to address user/content/application in general (e.g. with CIDs)
@@ -157,10 +157,10 @@ Some other dependencies and standards have to be tackled also such as:
 
 ### Milestone III. - Authentication
 
-DApps should not handle directly any configuration of the user web3 services because they may compromite the login credentials. 
+DApps should not handle directly any configuration of the user web3 services because they may compromise the login credentials. 
 To prevent that, users need to log in to their user-agent instead of log in to dApps.
-This solution offers Single-Sign-On that also makes the UX more convenient.
-In order to create this user-agent login, a dedicated Fair Data Browser Extension has to be emerged, that keeps and handles all required configuration and credentials of the user and interacts and manages the personal-store-space of the user.
+This solution offers Single-Sign-On that also makes the user experience more convenient.
+In order to create this user-agent login, a dedicated Fair Data Browser Extension has to be developed, that keeps and handles all required configuration and credentials of the user and interacts and manages the personal-store-space of the user.
 
 ![user-agent-web3](../resources/user-agent-web3.png)
 
@@ -203,7 +203,7 @@ Other parts related to this, of course, also have to be handled such as
 The dApp-user-namespace interaction at this point is sorted out, the only thing missing to fully replace web2 usage is the web3 backend services.
 
 Web3 backend services are dApps too, so initiating the connection and make requests towards them has the same steps as fetching frontend dApps:
-1. get meta-infromation of the dApp from the blockchain registry by its name
+1. get meta-information of the dApp from the blockchain registry by its name
 2. fetch the dapp state based on the acquired meta-information that contains the callable web3 service endpoints (e.g. PSS addresses) and the required request format.
 3. send the request towards the actual web3 service.
 
@@ -226,7 +226,7 @@ Eventually, it can cause a reputation-based data-market where dApps may raise th
 This whole will result a catalog in dApp feeds which describes the data-structure of encrypted content in which all content are valid.
 
 In this phase, all message formats and web3 service call workflows can be protocolled along with the design of a web3 service framework. 
-Top on that, the injected library and browser-extension logic have to be placed to negotiate such data-market deals.
+On top of that, the injected library and browser-extension logic have to be placed to negotiate such data-market deals.
 
 #### Products
 
