@@ -257,8 +257,6 @@ The proposals precede the implementations though those can happen simultaneously
 
 The arrows between the nodes only indicate what follows what and do not represent dependency.
 
-The time estimates below are optimistic and only show how long it will take to produce something from the task.
-
 # Drawbacks
 The design is similar to a waterfall-like project plan, but it allows the implementation and the design part to be in iteration. 
 
