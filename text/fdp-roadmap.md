@@ -79,10 +79,10 @@ For a user, the most appealing may be:
 - anonymity,
 - generate income with internet-usage,
 - global account and data handling accross dApps which 
-  - encourage dApps to keep high quality and fair services that yield more convenient ueser experience,
+  - encourage dApps to keep high quality and fair services that yield more convenient user experience,
   - single sign on to the internet.
 
-None of the milestones, explained in the next sections, cab be fully finished, but they can provide usable libraries, executables, interfaces and ground base for other protocols and ideas.
+None of the milestones, explained in the next sections, can be fully finished, but they can provide usable libraries, executables, interfaces and ground base for other protocols and ideas.
 
 # Reference-level explanation
 
