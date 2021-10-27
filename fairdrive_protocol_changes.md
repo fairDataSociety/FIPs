@@ -4,4 +4,4 @@ Changes to the umbrella Fairdrive protocol will be managed by the Fairdrive prot
 
 Sub-team members: 
 
-- ...
+- Viktor Toth (@nugaon)
