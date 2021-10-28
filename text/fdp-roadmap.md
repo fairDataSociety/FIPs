@@ -35,9 +35,9 @@ The foundation of such an environment consists of
 - commonly used data-structures, that give opportunity for a dApp to interpret the produced data of another dApp; and also allows for users to easily transfer their data from one application to another,
 - well defined Personal Data structure, that employes the protocolised data-structures and has a clear mapping to any particular data within the user-namespace,
 - uniform addressing of resources such as users, dApps or content,
-- instantly accessible global decentralised storage of users, dApps or data-structures, that only provides meta-information how to retrieve or interact with the entity in question,
+- instantly accessible global decentralised storage that provide meta-information about users, dApps or data-structures,
 - dApp environment and its workflow especially regarding to authentication, authorization and interaction with the personal data of users,
-- web3 backend service architectures that substitue the serverside of web2 that aggregate on shared data and serve users in a reliable and flexible fashion.
+- web3 backend service architectures that substitue the serverside of web2 that aggregate on shared data and serve users in a reliable way.
 
 Even though web3 has a great potential to emerge new use-cases and business models, lack of these ingredients makes the implementation of dApps impossible or at least really slow, uneffective and cumbersome.
 
@@ -45,7 +45,7 @@ With the proposed components, it is possible to build full-featured web3 applica
 Because of this, new dApps might have a huge amount of data that they can start with.
 For example, one dApp has data about a user who bought tickets for concerts and other dApp can make suggestions for listening new type of bands based on that - of course, if the user gives the permission to the dApp to read this personal data.
 
-Also, it plants the seed for new type of data-economics, where the user can share their valuable data with dApps for service or monetisation, which is a great deal for both sides.
+Also, it plants the seed for new type of data-economics, where the user can share their data with dApps for service or monetisation, which is a great deal for both sides.
 Here, it has to emphasized, the data in question is not binded to any real person and the shared data is well-boundered with a strict structure what it contains.
 
 Nevertheless, the data that the user wants share can be junk, but in a structure.
@@ -60,9 +60,9 @@ Many things are related to these points.
 First, not all user-interaction produced data can be shared, because a big portion of that has to be readable by other users, therefore being unencrypted.
 On the other side, dApps have a trade-off about how much data they put into the common use for reputation or just sell it.
 The data in question can be a collection of user-public keys with the user's handled data-structures or else.
-The reputation is good for incorporating with other dApps and can be an essential element of other dApps that based on that.
-Eventually, it can yield a situation where dApps that share data the most will be the base layer of the web3 ecosystem and dApps built on those will be in the interest of keeping those alive. 
-Moreover, the aggregation on reputation-friendly dApps is fully automatic, because of the globally accessible dApp registry that lists dApps with their dApp state.
+The reputation is good for incorporating with other dApps and can be an essential element of other dApps that are based on that.
+Eventually, it can yield a situation where dApps that share data the most will form the base layer of the web3 ecosystem and dApps building upon their data will have it in their interest to keep the former alive.
+Moreover, the aggregation on reputation-friendly dApps can be fully automatic, because of the globally accessible dApp registry that lists dApps with their dApp state.
 
 Thereby, starting a dApp development will be more appealing than developing a web2 application, because
 - new business-model/market which is flexible,
@@ -75,9 +75,9 @@ Thereby, starting a dApp development will be more appealing than developing a we
 - and censorship-resistant.
 
 For a user, the most appealing may be:
-- having personal data,
+- having personal data under own control,
 - anonymity,
-- generate income with internet-usage,
+- generate income from the data that are produced by internet-usage,
 - global account and data handling accross dApps which 
   - encourage dApps to keep high quality and fair services that yield more convenient user experience,
   - single sign on to the internet.
@@ -88,11 +88,11 @@ None of the milestones, explained in the next sections, can be fully finished, b
 
 Each implementation is preceded by a proposal.
 The implementation has to be based on the consensus from the proposal.
-The implementation programming language is JavaScript as one of the goal is synchronously alter data-structures and handle workflow on client-side.
+The implementation programming language is JavaScript as one of the goals is to synchronously alter data-structures and handle workflow on client-side.
 
 ## Milestones
 
-The roadmap is sliced up to 6 milestones.
+The roadmap consists of 6 milestones.
 
 The first 5 are about creating a web3 ecosystem and utilizing the potential of Ethereum Swarm.
 The last planned step is more about integrations with other P2P and web3 systems.
@@ -107,9 +107,9 @@ On the other hand, milestones can be considered completed when first versions of
 ### Milestone I. - Reviews with Protocolisation
 
 Currently FairOS is the base connection point of FDS projects, but its components and logic can live in the application layer as well.
-If the FairOS datastructures like PODs are defined on client-side, it allows freely manipulate it serverless.
+If the FairOS datastructures like PODs are defined on client-side, it would allow it to be freely manipulated in a serverless fashion.
 
-In the first step, FairOS components and business-logic have to be _reviewed_ and translate them into JavaScript _modules_.
+In the first step, FairOS components and business-logic have to be _reviewed_ and traslated into JavaScript _modules_.
 
 The required components of FairOS for the first milestone are:
 - feeds topic conventions: how FairOS slices the user-namespace up, 
@@ -119,9 +119,6 @@ The required components of FairOS for the first milestone are:
 Along with FairOS outsourcing, the general interpretation and structure of common datasets has to be considered as well.
 For that, there are already existing solutions such as [JSON-LD](https://json-ld.org/), but the proposal that addresses this issue also can come up with own solution.
 If the latter comes out first, the pre-processor should be really lightweight and be compatible with other pre-processors as well.
-Create versioning frame of FDP
-- UTF8-like version serialisation
-- Data pre-processor
 
 #### Products
 
