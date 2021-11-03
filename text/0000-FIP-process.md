@@ -68,7 +68,7 @@ In general, FIPs should not be substantially changed after becoming active, thou
 
 The whole process before a FIP becoming active and afterwards is represented by the diagram below.
 
-![image](https://user-images.githubusercontent.com/1554520/133931603-8c96fd12-2fe2-4b09-9720-cb401074f2a3.png)
+<img width="769" alt="image" src="https://user-images.githubusercontent.com/1554520/140074959-f2860de5-cccb-45e0-853f-905ff4a40a75.png">
 
 
 ## Reviewing FIPs
