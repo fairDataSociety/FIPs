@@ -1,7 +1,7 @@
-- FIP: (Number, to be assigned)
+- FIP: 1
 - title: Fairdrive Protocol Roadmap
 - author: Viktor Levente Tóth, @nugaon
-- status: draft
+- status: active
 - created: 2021-10-05
 
 # Summary
@@ -266,10 +266,6 @@ Because of that, the roadmap addressed the problem areas of:
 - web3 backend services,
 - data economics,
 - blockchain entity registries.
-
-# Prior art
-
-# Unresolved questions
 
 # Future possibilities
 
