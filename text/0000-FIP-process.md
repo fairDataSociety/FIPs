@@ -1,7 +1,7 @@
 - FIP: 0
 - title: RFC process definition
 - author: Črt Ahlin (@crtahlin)
-- status: draft
+- status: active
 - created: 2021-09-09
 
 
