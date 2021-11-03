@@ -8,13 +8,13 @@ tags: FIP/RFC, Fairdrive
 graph TD
 
 
-subgraph Idea phase
+subgraph IDEA PHASE
     -1(idea)
 
     0(confirmed idea)
 end
 
-subgraph Acceptance phase
+subgraph ACCEPTANCE PHASE
     a(DRAFT )
 
     b(DISCUSSION)
@@ -26,30 +26,32 @@ subgraph Acceptance phase
     e(CLOSED)
 end
 
-subgraph Active phase
+subgraph ACTIVE PHASE
     f(ACTIVE)
 
     g(IMPLEMENTED)
+end
 
+subgraph DEPRECATION PHASE
     h(DROPPED)
 
     i(SUPERSEDED)
 end
 
 
--1 -- preliminary research --> 0
+-1 -- author: preliminary research --> 0
 
-0 -- commit, pull request -->a
+0 -- author: commit, pull request -->a
 
-a -- sub-team confirms for discussion --> b
+a -- sub-team: confirms for discussion --> b
 
-b -- motion for FCP --> d
+b -- sub-team: motion for FCP --> d
 
 d -- not suitable --> e
 
 d -- currently not relevant --> c
 
-d -- accepted --> f
+d -- sub-team: accepted, merge PR --> f
 
 f -- reference implementation --> g
 
