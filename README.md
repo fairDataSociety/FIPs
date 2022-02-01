@@ -1,4 +1,4 @@
-# Fair data protocol Improvement Proposals - FIPs
+# Fair data Improvement Proposals - FIPs
 
 For the process of submitting Fairdrive Improvement Proposals, please refer to the [genesis FIP](./text/0000-FIP-process.md).
 
