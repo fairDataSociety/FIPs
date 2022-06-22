@@ -26,39 +26,20 @@ A  P2P Marketplace for NFT as the simplest use case can be built with the follow
 - Load Auction dapp from shared topic with FDP contracts
 
 # Reference-level explanation
-Technical explanation that explains the design in sufficient detail that interaction with other systems is clear and it is reasonably clear how it would get implemented. Corner case should be covered with examples.
 
-------
-
-This is the technical portion of the RFC. Explain the design in sufficient detail that:
-
-- Its interaction with other features is clear.
-- It is reasonably clear how the feature would be implemented.
-- Corner cases are dissected by example.
-
-The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
+TBD
 
 # Drawbacks
-What are the drawbacks of the design?
+
+TBD
 
 # Rationale and alternatives
-Why was the design chosen from all possible designs, despite drawbacks and why were some others not chosen?
+
+TBD
 
 # Prior art
-Discuss what prior art exists in relation to the FIP. This shows the author has studied the field and also informs the readers of the state of affairs.
 
-
-# Unresolved questions
-Address what:
-
-- parts of design need to be resolved as part of the FIP process,
-- parts of design need to be resolved through implementation process,
-- parts are out of scope of the FIP to be resolved.
-
-# Future possibilities
-Explain how you see the proposal could change in the future. You can list things that might be out of scope of the proposal but you see might be needed in the future or are just in the idea phase at the moment.
-
-This section could also be left blank. 
+TBD
 
 ## Copyright
 
