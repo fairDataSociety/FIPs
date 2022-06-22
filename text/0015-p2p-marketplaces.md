@@ -24,6 +24,7 @@ A  P2P Marketplace for NFT as the simplest use case can be built with the follow
 - Publish metadata: Add metadata to either as JSON or Beeson, these metadata must be BMT verifiable offchain.
 - Invite users to P2P Marketplace using PSS Messaging
 - Load Auction dapp from shared topic with FDP contracts
+- Lazy mint or mint on demand: Tokenized to NFT and validate metadata/asssets onchain with FDP BMT Contracts
 
 # Reference-level explanation
 
