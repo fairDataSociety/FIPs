@@ -5,3 +5,5 @@ Changes to the umbrella FIPs process will be managed by the FIPs process sub-tea
 Sub-team members:
 
 - Crt Ahlin (@crtahlin)
+- Viktor Toth (@nugaon)
+- Angela Witzhum (@AngelaVitzthum)
