@@ -31,16 +31,29 @@ FDP claims can be upgraded to work with Soulbound tokens. This feature gives hol
 
 ## Milestone 1 - Issuer
 
-A Dapp with issuer capabilities can grant and revoke SBT to holders. The claims that the issuers creates are stored in Swarm, with the hash in the onchain SBT token.
+A Dapp with issuer capabilities can grant and revoke SBT to holders. The claims that the issuers create are stored on Swarm, with the hash of the on-chain SBT token.
 
 Depending on the use case, these claims can be revoked or renewed.
 
 The implementation must be able to:
 
 - Have SBT issuer smart contracts
-- JavaScripts / Typescript library
+- [JavaScripts / Typescript library](https://github.com/fairDataSociety/fdp-contracts/tree/master/js-library)
 - Worked well with existing FDP libraries and smart contracts
 - Be able to support FDP registries
+
+### Solidity
+
+```solidity
+
+
+```
+
+### JavaScript
+
+```solidity
+
+```
 
 ## Milestone 2 - Holder
 
@@ -55,17 +68,44 @@ FDP implementation for this milestone impacts the following:
 - Be able to support FDP registries
 
 
+### Solidity
+
+```solidity
+
+
+```
+
+### JavaScript
+
+```solidity
+
+```
+
 ## Milestone 3 - Verifier
 
 The verifier attests a given proof presentation, that an issue claim to a holder of a SBT, is indeed valid. 
 How the proof presentation does works is not specified in the SBT papers, but we can assume it must have privacy feature and be verifiable onchain/offchain.
 
-We propose to the implementer use of BMT for proof presentation for public data, and a combination of open source zero knowledge libraries and BMT for data that requires privacy features (eg electronic invoices, medical records)
+We propose to the implementer use of BMT for proof presentation for public data and [Matter Labs Zinc language](https://github.com/matter-labs/zinc/tree/main/zinc-book/src) for use cases that requires privacy features (eg electronic invoices, medical records)
 
 Additionally: 
 
 - Update wallet or extension for proof presentation user flow
 - Update to javascript libraries to support proof presentations
+
+
+### Solidity
+
+```solidity
+
+
+```
+
+### JavaScript
+
+```solidity
+
+```
 
 # Drawbacks
 
