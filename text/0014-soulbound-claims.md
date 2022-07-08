@@ -41,7 +41,7 @@ How the proof presentation does works is not specified in the SBT papers, but we
 
 ## beezk - SBT Smart Contract Reference Implementation
 
-`beezk` is a soulbound token smart contract reference implementation using Matter Labs [zkSync 2.0](https://v2-docs.zksync.io/dev/zksync-v2/overview.html), which allows us to use ZK signatures with EVM Solidity smart contracts without registering additional private keys. Taking the following [ZK-SBT](https://github.com/molekilla/ZK-SBT/tree/main) project as boilerplate, we defined these interfaces.
+`beezk` is a soulbound token smart contract reference implementation using Consensys [gnark](https://docs.gnark.consensys.net/en/latest/), which allows us to use ZK signatures with EVM Solidity smart contracts without registering additional private keys. Taking the following [ZK-SBT](https://github.com/molekilla/ZK-SBT/tree/main) project as boilerplate, we defined these interfaces.
 
 ### Solidity - PrivateSoulMinter.sol - SBT
 
@@ -170,7 +170,6 @@ contract PrivateSoulMinter is Ownable{
 ```
 
 Implementers should read about using [signature verifier from EIP-1271](https://v2-docs.zksync.io/dev/zksync-v2/aa.html#aa-signature-checker)
-
 
 
 # Drawbacks
