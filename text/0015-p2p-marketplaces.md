@@ -51,7 +51,7 @@ Implementation must contain a set of claims using `beezk`, already described as
 - `publisher or issuer claim` which attests for proof of originator
 - `wholesaler claim` which attests for a proof of allowed or certified wholesaler
 
-These SBTs allows for a P2P marketplace to be transparent or trustless and avoids the need to have a database of certified wholsaler and verified NFT hashes.
+These SBTs allows for a P2P marketplace to be transparent or trustless and avoids the need to have a database of certified wholesaler and verified NFT hashes.
 
 ## swarm feeds - streaming feeds feature
 
