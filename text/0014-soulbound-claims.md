@@ -6,7 +6,7 @@
 
 # Summary
 
-Soulbound tokens for identity claims allows for a better user and developer experience by using existing Web3 technologies based on NFT token standards. In this FIP we described our findings and recommendations for FDP identity claims.
+Soulbound tokens for identity claims allows for a better user and developer experience by focusing on the identity space and eschewing DeFi oriented design patterns. In this FIP we described our findings and recommendations for FDP identity claims.
 
 # Context and motivation
 Decentralized Society is the next paradigm in the Ethereum ecosystem. Its focus is for `social use cases` where data is the main transferrable asset. A `Soul` represents an entity either a company, a group of people or a single person, which posses `Soulbound Tokens` or `SBTs`. These SBTs represent claims given to a Soul, these claims are `non-transferrable` and can be used as a `Verifiable Credential` or VC. 
