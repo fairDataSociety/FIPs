@@ -1,6 +1,6 @@
-# Fairdrive Improvement Proposals - FIPs
+# Fair data Improvement Proposals - FIPs
 
-For the process of submitting Fairdrive Improvement Proposals, please refer to the [genesis FIP](./text/0000-FIP-process.md).
+For the process of submitting Fair Data Improvement Proposals, please refer to the [genesis FIP](./text/0000-FIP-process.md).
 
 ## Sub-teams
 Sub-teams are responsible for particular areas of the FIPs. Information for specific sub-teams is available in separate files.
