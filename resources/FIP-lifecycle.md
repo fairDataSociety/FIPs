@@ -2,7 +2,7 @@
 tags: FIP/RFC, Fairdrive
 ---
 
-# Fairdrive Improvement Proposal Lifecycle
+# Fair Data Protocol Improvement Proposal Lifecycle
 
 ```mermaid
 graph TD
