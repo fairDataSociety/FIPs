@@ -1,4 +1,4 @@
-- FIP: 49
+- FIP: 56
 - title: FDP Blob Header
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
