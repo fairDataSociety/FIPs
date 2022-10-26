@@ -173,11 +173,11 @@ We can map IPLD, BeeSon, and JSON-LD using techniques and design patterns found 
 
 In Waku Connect, you defined topics as path with information that is used to understand the data or message being broadcasted.
 
-Eg /{dapp-name}/{version}/{content-topic-name}/{encoding}
+Eg `/{dapp-name}/{version}/{content-topic-name}/{encoding}`
 
 A Swarm Feed Linkable Topic can be in the form of:
 
-/{dissc}/{api-version}/{reference}/{topic}/{data-driver}
+`/{dissc}/{api-version}/{reference}/{topic}/{data-driver}`
 
 When encoding this to a BeeSon structure, it generates a SwarmFeedLinkable composite type.
 
