@@ -37,12 +37,13 @@ id
 Chapters
 =============
 createdAt
-discId
+disscId
 updatedPeriod
 feedReference
 feedTopic
 feedOwner
 ```
+
 Chapters are similar to how Compact Disc (CD) or DVD layouts data when you burn to a disc. You can skip, rewind or forward given the existing chapters for a feed.
 
 The secondary indexing approach is used with `addChapter`, which takes a recently updated feed (a data snapshot at a specific time), and a calldata parameter is sent where it contains a blob for indexing the data as smart contract event.
