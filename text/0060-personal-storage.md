@@ -2,7 +2,7 @@
 - title: Personal Storage
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
-- created: 2022-10-25
+- created: 2022-11-14
 
 # Summary
 One of the most obvious uses of a storage service is to store files in folders under a user profile.
