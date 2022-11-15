@@ -6,25 +6,25 @@
 
 # Summary
 One of the most obvious uses of a storage service is to store files in folders under a user profile.
-On a public storage network, the data that belongs to the user must be structured, encrypted, access controlled and mountable.
-The detailed solution below derives the Personal Storage of the user from their wallet and allows to create multiple drives that can be shared between other users for reading its content.
+On a public storage network, the data that belongs to the user must be encrypted, access controlled, structured and mountable.
+The detailed solution below derives the Personal Storage of the user from their wallet and allows to create multiple drives that can be shared with other users for reading its content.
 
 # Context, motivation and guide level explanation
 Services like Dropbox, Google Drive or Microsoft OneDrive provide storage capacity for users that is mountable to their filesystem and it can be accessible only to the owner or can be shared with other users.
 
-The Personal Storage concept of FDS aims at the same functionality but operates on decentralized storage networks as well.
-Top on that, the solution elaborated here has automatic versioning on the uploaded data.
+The Personal Storage concept of FDP aims at the same functionality but operates on decentralized storage networks as well.
+In addition, the solution elaborated here has automatic versioning on the uploaded data.
 
-Users are represented as HD wallets from which multiple assymetric keypairs can be generated.
+A hierarchical deterministic wallet (HD walet), from which multiple asymmetric key pairs can be derived, represents a single user account.
 
-Each derived key acts as a _POD_ in this concept which can be seem as a _drive_ for storing personal data.
-The PODs have their own IAAS within which directories and files can be referenced (for more information read [IAAS document](./0013-iaas.md)).
-Because PODs have different keys signing the content, one cannot associate PODs to an identity - unless the user wants to do that.
+Each derived key acts as a _POD_ in this concept which can be seen as a _drive_ for storing personal data.
+The PODs have their own Identity Anchored Address Space (IAAS) within which directories and files can be referenced (for more information read [IAAS document](./0013-iaas.md)).
+Because PODs have different keys signing the content, one cannot associate PODs to a user account - unless the user wants to do that.
 
-DApps can interact with individual PODs of the user preventing reading more information that those must handle.
+DApps can only interact with individual PODs of the user preventing reading more information than needed.
 Nevertheless, there must be trusted DApps that manage all PODs of the user so that user can remove/list/add PODs of its Personal storage.
-The trusted dApps by FDP are:
-- FairDrive
+Such trusted dApps are:
+- Fairdrive
 - FairOS
 - FDP-CLI
 
@@ -39,7 +39,7 @@ Optionally, the file structure of a shared POD can be merged with another POD fo
 
 The versioning is achieved by using Epoch-based Swarm Feeds that allows sporadic updates under a topic.
 The updates are achored to the time so one can find the nearest update of a given point in time.
-In the feed payloads all related metadata can be found for files and folders such as its type, name, creation data, etc.
+In the feed payloads, all related metadata can be found for files and folders such as its type, name, creation data, etc.
 _For more information about Epoch-based feeds, read the Book of Swarm (1.0) at 4.3.4 chapter._
 
 # Reference-level explanation
@@ -52,7 +52,7 @@ Its derivation path is `m/44'/60'/0'/0/0` but _optionally_ clients can support m
 This address is used to make blockchain transactions and manage PODs meanwhile other addresses (PODs) only do off-chain operations for example Swarm Feed signing for dApps.
 
 ## POD
-All POD has a `name` property in order to refer that with a human-readable string.
+All POD have a `name` property in order to refer that with a human-readable string.
 Each POD type has additional attributes required to initialize the drive in question.
 
 The private POD is a derived keypair from the HD Wallet on path `m/44'/60'/0'/0/${index}` where `${index}` starts from `1` and it is incremented by creating a new POD.
@@ -68,7 +68,7 @@ interface PrivatePod {
 One can share their private POD that becames a Shared POD.
 For that, a shared link is created that the other user can insert to their POD list. 
 It contains the before mentioned `password` and the Ethereum Address of the POD.
-Latter is needed to query the Single Owner Chunks of the POD.
+Latter is needed to query the Feed Updates of the POD.
 All together, a Shared POD structure looks like the following
 
 Shared POD
@@ -210,6 +210,7 @@ DApps can interact with the user drives (PODs) that does not expose additional i
 
 # Prior art
 - [BIP-44 - Multi-Account Hierarchy for Determenistric Wallets](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki)
+- [Book of Swarm v1.0 - 2.2.3 Single-owner chunks](https://www.ethswarm.org/The-Book-of-Swarm.pdf)
 - [Book of Swarm v1.0 - 4.3.4 Epoch based indexing](https://www.ethswarm.org/The-Book-of-Swarm.pdf)
 - [MIME types](https://en.wikipedia.org/wiki/Media_type)
 
@@ -217,7 +218,7 @@ DApps can interact with the user drives (PODs) that does not expose additional i
 - Sharing directories and files without exposing POD source. It may need different and distinct encryption key usage for directories or files. 
 - Tracing and managing granted permissions of Shared PODs (e.g. ACL/ACT functionality).
 - The concept can be sorted out without using HD wallets since the encrypted POD list can store private keys as well. Nevertheless, it is a legacy feature of FairOS on which multiple applications are dependent, thereby, it is questionable to introduce such a breaking change since it does not cause any problem.
-- the access time updates cannot be garanteed nor worth it to do that since the uploads have costs in this environment.
+- the access time updates cannot be garanteed nor worth doing that since the uploads have costs in this environment.
 - the stored files could be uploaded to any storage service since only the metadata handling is Ethereum Swarm specific in the architecture.
 
 ## Copyright
