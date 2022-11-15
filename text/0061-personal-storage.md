@@ -1,4 +1,4 @@
-- FIP: 60
+- FIP: 61
 - title: Personal Storage
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
