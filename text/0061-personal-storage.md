@@ -101,16 +101,16 @@ The metadata must contain all attributes that make possible to mount the persona
 ```ts
 export interface FileMetadata {
   version: number // default is 2
-  file_path: string
-  file_name: string
-  file_size: number
-  block_size: number // 1000000 bytes by default
-  content_type: string // MIME type
+  filePath: string
+  fileName: string
+  fileSize: number
+  blockSize: number // 1000000 bytes by default
+  contentType: string // MIME type
   compression: 'snappy' | 'gzip'
-  creation_time: number
-  access_time: number
-  modification_time: number
-  file_inode_reference: string // base64 encoded content address
+  creationTime: number
+  accessTime: number
+  modificationTime: number
+  fileInodeReference: string // base64 encoded content address
 }
 ```
 
@@ -121,7 +121,7 @@ The `file_inode_reference` points to a JSON object that stores an array of block
 ```ts
 interface Block {
   size: number // information size of the block in bytes that has to be lesser or equal than `block_size`
-  compressed_size: number // compressed data size in bytes
+  compressedSize: number // compressed data size in bytes
   reference: {
     swarm: string // base64 encoded content address
   }
@@ -140,11 +140,11 @@ interface Directory {
     version: number // default is 2
     path: string
     name: string
-    creation_time: number
-    modification_time: number
-    access_time: number
+    creationTime: number
+    modificationTime: number
+    accessTime: number
   }
-  file_or_dir_names: string[] | null
+  fileOrDirNames: string[] | null
 }
 ```
 The `file_or_dir_names` and `modification_time` metadata have to be updated after every Directory Item insertion and deletion.
