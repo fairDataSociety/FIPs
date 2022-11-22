@@ -34,31 +34,10 @@ The Ethereum address is needed to contruct Single Owner Chunk (SOC) address alon
 The login workflow defines the exact SOC Topic construction:
 
 ```
-socTopic = S2K(fdpLoginVersion + username + password)
+socTopic = H(fdpLoginVersion + username + password)
 ```
 
-Where the parameter consists of concatenated strings and the current `fdpLoginVersion` is `FDP-login-v1.0`.
-
-In order to prevent malicious brute-force trials to find the SOC that holds the credentials, 
-the topic construction function `S2K` must be expensive to calculate.
-First, it takes the string input bytes which goes through `keccak256` hash function and then
-it must have `500000` rounds on hashing the previous hash with salt `keccak256('Fair-Data-Protocol->Portable-Account')`.
-
-So the `S2K` function would be (in TypeScript)
-```ts
-const s2k = (baseSocTopic: Uint8Array) => {
-  const rounds = 500000
-  const salt = keccak256Hash(new TextEncoder().encode('Fair-Data-Protocol->Portable-Account'))
-  let hash = keccak256Hash(baseSocTopic)
-  for (let i = 0; i < rounds; i++) {
-    hash = keccak256Hash(hash, salt)
-  }
-
-  return hash!
-}
-```
-
-
+Where the parameter is consist of concatenated strings, the hash function is `keccak256` and the current `fdpLoginVersion` is `FDP-login-v1.0`.
 With this, the encrypted seed address on the Swarm network can be calculated, formally
 
 ```
