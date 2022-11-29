@@ -150,7 +150,10 @@ interface Directory {
 The `fileOrDirNames` and `modificationTime` metadata have to be updated after every Directory Item insertion and deletion.
 
 The serialization of these JSON objects are the same as at POD: the objects first have to be stringified then UTF8 encoded into a byte array.
-The serialized data is encrypted with the password of the related POD.
+
+The file and directory metadata are encrypted with AES using the password of the related POD.
+The file itself is encrypted by the storage which must return an additional encryption key next to the file reference.
+This key and the reference is encoded in the `reference.swarm` and `fileInodeReference` properties.
 
 ## Addressing
 In order to address pods, files and directories, the concept leverages the Swarm Epoch-based Feeds.
@@ -185,9 +188,9 @@ Uploading File
 0. Choose POD where the metadata will be stored (POD list is available in the IAAS of the Main Identity)
 1. Construct FileMetadata
 2. Split file into blocks
-3. Upload encrypted blocks
+3. Upload blocks
 4. Construct inode metadata for blocks
-5. Upload encrypted inode metadata
+5. Upload inode metadata
 6. Write FileMetadata Feed where the topic is the path (e.g. `/path/to/the/file.md`)
 7. Update the metadata of the corresponding parent directory (e.g. `/path/to/the`)
 
@@ -196,14 +199,14 @@ Downloading File
 0. Choose POD where the metadata is stored (POD list is available in the IAAS of the Main Identity)
 1. Get FileMetadata Feed where the topic is the path (e.g. `/path/to/the/file.md`)
 2. Decrypt FileMetadata to access inode metadata reference
-3. Download inode metadata and decrypt it in order to get block references
-4. Download and decrypt block data
+3. Download inode metadata in order to get block references
+4. Download block data
 5. Assemble blocks and interpret it as the MIME type (stored in FileMetadata)
 
 # Fair Data Principles alignment
 Personal data handling should be fully open sourced and transparent respecting the users privacy.
 
-This proposal provides a solution where the data is encrypted client-side and using decentralised storage service that prevents censorship of the user (based on their identity).
+This proposal provides a solution where using decentralised storage service that prevents censorship of the user (based on their identity).
 This allows the user to access anytime and anywhere to their personal storage using a single HD wallet.
 
 DApps can interact with the user drives (PODs) that does not expose additional information what other type of data they store, still, it supports interoperability by Shared PODs.
@@ -215,7 +218,7 @@ DApps can interact with the user drives (PODs) that does not expose additional i
 - [MIME types](https://en.wikipedia.org/wiki/Media_type)
 
 # Unresolved questions
-- Sharing directories and files without exposing POD source. It may need different and distinct encryption key usage for directories or files. 
+- Sharing directories and files without exposing POD password or trusting in storage-side encryption. It may need different and distinct encryption key usage/generation for directories or files. 
 - Tracing and managing granted permissions of Shared PODs (e.g. ACL/ACT functionality).
 - The concept can be sorted out without using HD wallets since the encrypted POD list can store private keys as well. Nevertheless, it is a legacy feature of FairOS on which multiple applications are dependent, thereby, it is questionable to introduce such a breaking change since it does not cause any problem.
 - the access time updates cannot be garanteed nor worth doing that since the uploads have costs in this environment.
