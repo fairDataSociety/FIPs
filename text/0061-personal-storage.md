@@ -116,7 +116,7 @@ export interface FileMetadata {
 
 One particular thing in storing the data is that the stored file can be splitted into `blocks` that can be referenced later individually.
 For the block size, any arbitrary number can be chosen in byte resolution.
-The `file_inode_reference` points to a JSON object that stores an array of blocks.
+The `fileInodeReference` points to a JSON object that stores an array of blocks.
 
 ```ts
 interface Block {
@@ -147,7 +147,7 @@ interface Directory {
   fileOrDirNames: string[] | null
 }
 ```
-The `file_or_dir_names` and `modification_time` metadata have to be updated after every Directory Item insertion and deletion.
+The `fileOrDirNames` and `modificationTime` metadata have to be updated after every Directory Item insertion and deletion.
 
 The serialization of these JSON objects are the same as at POD: the objects first have to be stringified then UTF8 encoded into a byte array.
 The serialized data is encrypted with the password of the related POD.
