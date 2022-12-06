@@ -2,7 +2,7 @@
 - title: Graffiti feed
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
-- created: 2022-11-29
+- created: 2022-12-06
 
 # Summary
 Serverless off-chain data-source signaling for dynamic decentralized applications.
