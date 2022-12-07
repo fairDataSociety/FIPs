@@ -44,6 +44,8 @@ The application used by Alice will always try to fetch cats related comments fro
 
 Worth to mention, all contributions advertised in Graffiti Feed automatically provide a base for other Graffiti Feeds related to those contributions (e.g. comments on comments).
 
+![graffiti-feed-chart](../resources/graffiti-feed.png)
+
 # Reference-level explanation
 The original idea has its implementation similar that described below in the [AnyThread project](https://github.com/anythread/anythread/)
 
