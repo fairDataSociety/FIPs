@@ -25,18 +25,20 @@ E.g. Alice uploads a picture to the P2P storage network and send its content add
 Bob can download this content, moreover, use the address as a private key that allows him to write a comment in its Graffiti Feed.
 This feed written by the associated private key is fetched by other parties that want to retreive CMI of the content in question.
 Then Bob also sends this content address to Carol and Dave and they also can comment and distribute it further.
-Next time when Alice queries the Graffiti Feed of her content, she will see new comments from unknown users. 
+Next time when Alice queries the Graffiti Feed of her content, she will see new comments from unknown users.
+The content address in question also can be advertised in a consensual Graffiti Feed for other unknown parties.
 
 The process becomes not that effective when Carol writes data outside of the consensual CMI structure (invalid data) to the Graffiti Feed.
 In this case, the application has to ignore that update thereby slowing down the retrieval of valuable content for the other clients.
 This issue can be elaminated by a web3 service that aggregates every well-formed updates, thereby also speeding up the retrieval time for fetching CMI, but that is not the scope of this FIP.
 
-The preferred CMI record structure holds one or many IAAS identifiers (public key or ethereum address) that only the participants can write possessing its corresponding private key (Personal Storage).
+Eventually, a CMI can be any consensual data such as the content address advertisement or user-based contributions such as commenting as well.
+For the latter, the preferred CMI record structure holds one or many IAAS identifiers (public key or ethereum address) which point to a storage area that only the participants can write possessing its corresponding private key (Personal Storage).
 In other worlds, participants _advertise_ their storage area in particular Graffiti Feeds of content.
 By that, the contributions is user-based that facilitate the aggregation of useful CMI.
 
-Let's say, Alice did not know about Dave but she obtained his Personal Storage addresses from Graffiti Feeds related to content about cats.
-Because she liked his contributions to cat topics, she adds his Personal Storage addresses to her list.
+Let's say, Alice did not know about Dave but she obtained his Personal Storage address from Graffiti Feeds related to content about cats.
+Because she liked his contributions to cat topics, she adds his Personal Storage address to her list.
 On the other hand, she did not like contributions from Carol so she adds her to the block list.
 The application used by Alice will always try to fetch cats related comments from Personal Storages according to these lists (which can be delegated to the before mentioned service aggregators).
 
@@ -57,14 +59,14 @@ To create a consensus the followings should be defined:
 1. how to calculate the CPK,
 2. interpretation of the metadata of the CMI (what properties one record must hold in what type),
 3. an arbitrary topic in the IAAS of the CPK to store CMI and its Feed lookup algorithm (Graffiti Feed Topic),
-4. (optionally) the topic conventions and metadata format in the Personal Storage of the users whose IAAS identifier appear in the Graffiti Feed.
+4. (required only at user-based consensus) the topic conventions and metadata format in the Personal Storage of the users whose IAAS identifier appear in the Graffiti Feed.
 
 Possible workflow for the points above:
 calculate either the BMT address or hash of the common resource for `1`.
 Both are 32 bytes that can be used directly as private key, let's choose `cpk = bmtAddress(content)`.
 
 By designing the payload of Graffiti Feed `2`, the `4` point also can be prepared for which the IAAS identifier of the CMI contributor must be stored.
-It can be the public key or ethereum address of their Personal Storage but now choosing the latter still one property needs to be defined
+It can be the public key or ethereum address of their Personal Storage but now choosing the latter one property needs to be defined
 ```ts
 interface GraffityFeedRecord {
   iaasIdentifier: EthAddress, // 40 chars longs string without 0x prefix
