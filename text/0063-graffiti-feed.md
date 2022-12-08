@@ -1,4 +1,4 @@
-- FIP: (Number, to be assigned)
+- FIP: 62
 - title: Graffiti feed
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
