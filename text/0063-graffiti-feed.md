@@ -5,7 +5,11 @@
 - created: 2022-12-06
 
 # Summary
-Serverless off-chain data-source signaling for dynamic decentralized applications.
+Graffiti Feed is a serverless off-chain information and data-source signaling for dynamic decentralized applications.
+It contains a list of records in the same structure that anyone can read and write using a consensus.
+Using the below described architecture, parties can advertise some information to others under an arbitrary topic.
+Based on the topic, it facilitates finding related unknown resources and actors that can be useful for many use-cases such as 
+web3 forum, content labeling, initializing connection with others and else.
 
 # Context, motivation and guide level explanation
 All (dynamic) web applications communicate with central servers for various reasons from which the most prominent is to access and write a central database.
