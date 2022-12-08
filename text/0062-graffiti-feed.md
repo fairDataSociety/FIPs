@@ -1,5 +1,5 @@
 - FIP: 62
-- title: Graffiti feed
+- title: Graffiti Feed
 - author: Viktor Levente Tóth, @nugaon
 - status: draft
 - created: 2022-12-06
