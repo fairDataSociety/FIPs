@@ -20,31 +20,31 @@ The most straightforward option would be to write some on-chain registry (smart 
 but this proposed solution offers a cheaper and faster off-chain workflow by leveraging [IAAS](./0013-iaas.md) (a.k.a Single Owner Chunks, Feeds).
 
 The idea comes from that everything can be used as a private key since it is just a random, fixed-lengthed byte array to which any input can be hashed.
-Generating this private key by consensus allows users to write into the same IAAS that other peers fetch in order to retreive Community Maintained Information (CMI) of the associated resource.
+Generating this private key by consensus allows users to write into the same IAAS that other peers fetch in order to retrieve Community Maintained Information (CMI) of the associated resource.
 The consensus can be outlined by a simple frontend application which has 0 maintenance expenditure still with dynamic properties.
 It is possible because the users only interact with the decentralized storage and there is no backend server required to maintain the dynamic workflow.
 
 This approach by itself is the most effective between parties to have on-demand decentralized information sharing.
 E.g. Alice uploads a picture to the P2P storage network and send its content address to Bob. 
 Bob can download this content, moreover, use the address as a private key that allows him to write a comment in its Graffiti Feed.
-This feed written by the associated private key is fetched by other parties that want to retreive CMI of the content in question.
+This feed written by the associated private key is fetched by other parties that want to retrieve CMI of the content in question.
 Then Bob also sends this content address to Carol and Dave and they also can comment and distribute it further.
 Next time when Alice queries the Graffiti Feed of her content, she will see new comments from unknown users.
 The content address in question also can be advertised in a consensual Graffiti Feed for other unknown parties.
 
-The process becomes not that effective when Carol writes data outside of the consensual CMI structure (invalid data) to the Graffiti Feed.
+The process becomes not that effective when Carol writes data outside the consensual CMI structure (invalid data) to the Graffiti Feed.
 In this case, the application has to ignore that update thereby slowing down the retrieval of valuable content for the other clients.
 This issue can be elaminated by a web3 service that aggregates every well-formed updates, thereby also speeding up the retrieval time for fetching CMI, but that is not the scope of this FIP.
 
 Eventually, a CMI can be any consensual data such as the content address advertisement or user-based contributions such as commenting as well.
 For the latter, the preferred CMI record structure holds one or many IAAS identifiers (public key or ethereum address) which point to a storage area that only the participants can write possessing its corresponding private key (Personal Storage).
 In other worlds, participants _advertise_ their storage area in particular Graffiti Feeds of content.
-By that, the contributions is user-based that facilitate the aggregation of useful CMI.
+By that, the contributions are user-based that facilitate the aggregation of useful CMI.
 
 Let's say, Alice did not know about Dave but she obtained his Personal Storage address from Graffiti Feeds related to content about cats.
 Because she liked his contributions to cat topics, she adds his Personal Storage address to her list.
-On the other hand, she did not like contributions from Carol so she adds her to the block list.
-The application used by Alice will always try to fetch cats related comments from Personal Storages according to these lists (which can be delegated to the before mentioned service aggregators).
+On the other hand, she did not like contributions from Carol, so she adds her to the block list.
+The application used by Alice will always try to fetch cats related comments from all Personal Storage of these lists (which can be delegated to the before mentioned service aggregators).
 
 Worth to mention, all contributions advertised in Graffiti Feed automatically provide a base for other Graffiti Feeds related to those contributions (e.g. comments on comments).
 
@@ -86,7 +86,7 @@ This convention allows to define different consensus on the same resource.
 
 The Personal Storage write and read also must be consensual `4`.
 
-During the Personal Storage Topic (PST) construction, the only thing that has to be taken account is that the choosen Feed topic should not collide with other feed topic conventions.
+During the Personal Storage Topic (PST) construction, the only thing that has to be taken account is that the chosen Feed topic should not collide with other feed topic conventions.
 One simple solution is hashing the CPK (which is also the address of the content) with the GFT: `pst = keccak256(cpk + gft)`.
 
 Only missing part is the structure of the contributed information (which is the `GraffitiRecord` itself if `4` is not implemented).
@@ -108,8 +108,8 @@ The feed records have the following properties:
 1. cannot keep the canonical order of the updates in the indices
 2. different payloads cannot occur on the same index
 
-The `1` point is because the data will be eventually garbage collected from the network (in Swarm this is based on the a Postage Stamp value).
-The garbage collected records will be replaced with newer content on lower indices, because even though everyone is free to write on every index,
+The `1` point is because the data will be eventually garbage collected from the network (in Swarm this is based on the Postage Stamp value).
+The garbage collected records will be replaced with newer content on lower indices because even though everyone is free to write on every index,
 the application starts to fetch updates always from the beginning.
 Because of this everyone is incentivized to write on the lowest free index.
 
@@ -118,7 +118,7 @@ In other words, if one uploaded a payload on an arbitrary index, the nodes must 
 Records may be removed from the storage network only when garbage collection happens (the price of the data deflates).
 
 # Fair Data Principles alignment
-The censorship-resistancy and the free-information-flow must be layed out on the protocol level.
+The censorship-resistancy and the free-information-flow must be laid out on the protocol level.
 
 Aggregating, ranking, indexing, sorting, conditional, community-centric service feeds can be created by collecting independent data-sources from graffiti feeds.
 This can happen in a fully open and decentralized manner which also facilitates interoperability and anonymity.
