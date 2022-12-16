@@ -129,6 +129,8 @@ This can happen in a fully open and decentralized manner which also facilitates 
 - Book of Swarm V1.0 pre-release 7 - 4.3 swarm feeds and mutable resource updates
 
 # Unresolved questions
+When two concurrent writes happen to the same Feed index at the same time, it is difficult to decide which version to keep.
+There are ongoing researches on storage network level how it could be resolved but that is not in the scope of this document. 
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
