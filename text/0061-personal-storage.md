@@ -219,6 +219,7 @@ DApps can interact with the user drives (PODs) that does not expose additional i
 
 # Unresolved questions
 - Sharing directories and files without exposing POD password or trusting in storage-side encryption. It may need different and distinct encryption key usage/generation for directories or files. 
+- Feed lookup can be faster with sequential indexing in which case the epoch-based indexing should be replaced.
 - Tracing and managing granted permissions of Shared PODs (e.g. ACL/ACT functionality).
 - The concept can be sorted out without using HD wallets since the encrypted POD list can store private keys as well. Nevertheless, it is a legacy feature of FairOS on which multiple applications are dependent, thereby, it is questionable to introduce such a breaking change since it does not cause any problem.
 - the access time updates cannot be garanteed nor worth doing that since the uploads have costs in this environment.
