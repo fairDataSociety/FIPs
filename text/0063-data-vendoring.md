@@ -10,7 +10,7 @@ Decentralized Queryable Data Vendoring applies to data providers or sellers that
 # Abstract
 A Decentralized Queryable Data Vendoring protocol consists of several components:
 
-- **Data Provisioning Pricing **: A onchain smart contract that contains `getPriceEstimates(dataSizeToProvision)` where `dataSizeToProvision` is the size of the data to be provisioned and results in a result set with price estimates and ERC20 token to be used for purchase and `purchaseProvisionedData(dataSizeToProvision, options as calldata)` which purchases the data, in our case a call to Swarm PostageStamp contract, but the interface is generic enough to be also useful in any EVM compatible engine (eg Filecoin FVM).
+- **Data Provisioning Pricing**: A onchain smart contract that contains `getPriceEstimates(dataSizeToProvision)` where `dataSizeToProvision` is the size of the data to be provisioned and results in a result set with price estimates and ERC20 token to be used for purchase and `purchaseProvisionedData(dataSizeToProvision, options as calldata)` which purchases the data, in our case a call to Swarm PostageStamp contract, but the interface is generic enough to be also useful in any EVM compatible engine (eg Filecoin FVM).
 
 - **Data Vendor Index Page**: A generic index page as HTML and RESTful that returns metadata and human readable information about the data. This is ENS resolvable and is very similar to a GitHub Repository Index page.
 
