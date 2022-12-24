@@ -1,4 +1,4 @@
-- FIP: 64
+- FIP: 63
 - title: Decentralized Queryable Data Vendoring using predefined data structures and models
 - author: @molekilla (Rogelio Morrell)
 - status: draft
