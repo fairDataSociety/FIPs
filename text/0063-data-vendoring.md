@@ -10,16 +10,18 @@ Decentralized Queryable Data Vendoring applies to data providers or sellers that
 # Abstract
 A Decentralized Queryable Data Vendoring protocol consists of several components:
 
-- **Data Provisioning Pricing**: A onchain smart contract that contains `getPriceEstimates(dataSizeToProvision)` where `dataSizeToProvision` is the size of the data to be provisioned and results in a result set with price estimates and ERC20 token to be used for purchase and `purchaseProvisionedData(dataSizeToProvision, options as calldata)` which purchases the data, in our case a call to Swarm PostageStamp contract, but the interface is generic enough to be also useful in any EVM compatible engine (eg Filecoin FVM).
+
+- **Data Provisioning Broker**: A onchain smart contract that contains `getPriceEstimates(dataSizeToProvision)` where `dataSizeToProvision` is the size of the data to be provisioned and results in a result set with price estimates and ERC20 token to be used for purchase and `purchaseProvisionedData(dataSizeToProvision, options as calldata)` which purchases the data, in our case a call to Swarm PostageStamp contract, but the interface is generic enough to be also useful in any EVM compatible engine (eg Filecoin FVM). These smart contract brokers requires oracles to price data for each chain
 
 - **Data Vendor Index Page**: A generic index page as HTML and RESTful that returns metadata and human readable information about the data. This is ENS resolvable and is very similar to a GitHub Repository Index page.
 
-- **Data Vendor Query API**: An `Apache Arrow DataFusion` Rust SQL and DataFrame query engine that queries JSON (Beeson) data blocks.
+- **Data Vendor Query API**: An `Apache Arrow DataFusion` Rust SQL and DataFrame query engine that queries JSON (Beeson) data blocks and uses [HTTP Query method](https://httpwg.org/http-extensions/draft-ietf-httpbis-safe-method-w-body.html)
 
-- **Data Vendor Data Structures API**: A `FDP Smart Data Contract` data structure that stores data as KV, List, Tuples, or custom data structures  (eg Redis - like structures) and queryable directly or using Vendor Query API.
+- **Data Vendor Structures Fields API**: A [Structured Field Values for HTTP](https://httpwg.org/http-extensions/draft-ietf-httpbis-sfbis.html) compatible web server that works as Redis-like database, and might either be centralized or decentralized in nature.
 
 - **Data Vendor Schema Model API**: Similar to Data Structures API, but uses Schemas.org models.
 
+- **Data Structures Server**: An HTTP server that implements `HTTP Query method` and `Structured Field Values` and uses Swarm as decentralized datastore.
 
 # Motivation
 
@@ -153,6 +155,7 @@ None
 - [Understanding Ethereum Smart Contract Storage](https://programtheblockchain.com/posts/2018/03/09/understanding-ethereum-smart-contract-storage/)
 - [A  discoverable, indexable snark storage content (dissc) protocol](https://github.com/fairDataSociety/FIPs/blob/86b1f6909a7661cde46d1e3c20c22651703ff2c4/text/0060-dissc-protocol.md)
 - [Crypto/Web3 Startup ideas 2023](https://alliancedao.notion.site/Crypto-Web3-Startup-Ideas-2023-Edition-48d40ccadeeb42a48056659fcce109b1#5900abc0529c4de28d13338dcf76d1e9)
-
+- [HTTP Query method](https://httpwg.org/http-extensions/draft-ietf-httpbis-safe-method-w-body.html)
+- [Structured Field Values for HTTP](https://httpwg.org/http-extensions/draft-ietf-httpbis-sfbis.html)
 
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
