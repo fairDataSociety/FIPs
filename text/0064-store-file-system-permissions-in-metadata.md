@@ -52,5 +52,7 @@ type MetaData struct {
 
 These modes needs to be stored in octal with leading `0`, i.e. 0777, 0644, 0755. 
 
+Default mode for files should be 0600 and folder 0700.
+
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
