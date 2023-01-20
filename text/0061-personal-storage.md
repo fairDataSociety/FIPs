@@ -111,6 +111,7 @@ export interface FileMetadata {
   accessTime: number
   modificationTime: number
   fileInodeReference: string // base64 encoded content address
+  mode: number // Unix file permission; access mode representing read, write and execute permissions on file for user, usergroup and everyone else in form of 3 octals. Default: 0600
 }
 ```
 
@@ -143,6 +144,7 @@ interface Directory {
     creationTime: number
     modificationTime: number
     accessTime: number
+    mode: number // 3 octals of unix file permission. default is 0700
   }
   fileOrDirNames: string[] | null
 }
