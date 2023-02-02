@@ -12,7 +12,7 @@ Permissions can be set at the individual file or directory level, or inherited f
 With Fairdrive Desktop App (FDA), user can now access files and directories in userspace.
 User can mount pods and access files through file manager and terminal. Currently FDA assigns a generic set of permissions to files and directories. This allows basic read, write and delete functionality for files and directories.
 
-The idea behind adding and storing file system permissions to is that it will allow user to specify if they want to store any executable file in their pods and be able to run it from their mounts  
+The idea behind adding and storing file system permissions to is that it will allow user to specify if they want to store any executable file in their pods and be able to run it from their mounts
 
 This can potentially be the stepping stone for file system ACL aswell.
 
@@ -22,37 +22,59 @@ We add `mode` fields in file and directory metadata
 ```go
 // file metadata
 type MetaData struct {
-	Version          uint8  `json:"version"`
-	Path             string `json:"filePath"`
-	Name             string `json:"fileName"`
-	Size             uint64 `json:"fileSize"`
-	BlockSize        uint32 `json:"blockSize"`
-	ContentType      string `json:"contentType"`
-	Compression      string `json:"compression"`
-	CreationTime     int64  `json:"creationTime"`
-	AccessTime       int64  `json:"accessTime"`
-	ModificationTime int64  `json:"modificationTime"`
-	InodeAddress     []byte `json:"fileInodeReference"`
-	Mode             uint32 `json:"mode"` // stores file-permissions
+Version          uint8  `json:"version"`
+Path             string `json:"filePath"`
+Name             string `json:"fileName"`
+Size             uint64 `json:"fileSize"`
+BlockSize        uint32 `json:"blockSize"`
+ContentType      string `json:"contentType"`
+Compression      string `json:"compression"`
+CreationTime     int64  `json:"creationTime"`
+AccessTime       int64  `json:"accessTime"`
+ModificationTime int64  `json:"modificationTime"`
+InodeAddress     []byte `json:"fileInodeReference"`
+Mode             uint32 `json:"mode"` // stores file-mode
 }
 ```
 
 ```go
 // directory metadata
 type MetaData struct {
-	Version          uint8  `json:"version"`
-	Path             string `json:"path"`
-	Name             string `json:"name"`
-	CreationTime     int64  `json:"creationTime"`
-	AccessTime       int64  `json:"accessTime"`
-	ModificationTime int64  `json:"modificationTime"`
-	Mode             uint32 `json:"mode"` // stores file-permissions
+ Version          uint8  `json:"version"`
+ Path             string `json:"path"`
+ Name             string `json:"name"`
+ CreationTime     int64  `json:"creationTime"`
+ AccessTime       int64  `json:"accessTime"`
+ ModificationTime int64  `json:"modificationTime"`
+ Mode             uint32 `json:"mode"` // stores file-mode
 }
 ```
 
-These modes needs to be stored in octal with leading `0`, i.e. 0777, 0644, 0755. 
+In order to store the file type and permissions in the `mode` filed we need to perform bitwise OR operation
+between the file type and permission bits.
 
-Default mode for files should be 0600 and folder 0700.
+Modes need to be stored in octal with leading `0`.
+
+eg.
+```go
+const (
+ S_IFREG                = 0100000
+ defaultFilePermission  = 0600
+)
+
+var filemode = S_IFREG|defaultFilePermission
+```
+
+Default values should be
+```go
+const (
+    S_IFREG                = 0100000
+    defaultFilePermission  = 0600
+
+    S_IFDIR                   = 0040000
+    defaultDirectoryPrmission = 0700
+)
+```
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
