@@ -111,7 +111,7 @@ export interface FileMetadata {
   accessTime: number
   modificationTime: number
   fileInodeReference: string // base64 encoded content address
-  mode: number // Unix file permission; access mode representing read, write and execute permissions on file for user, usergroup and everyone else in form of 3 octals. Default: 0600
+  mode: number
 }
 ```
 
@@ -144,7 +144,7 @@ interface Directory {
     creationTime: number
     modificationTime: number
     accessTime: number
-    mode: number // 3 octals of unix file permission. default is 0700
+    mode: number
   }
   fileOrDirNames: string[] | null
 }
@@ -156,6 +156,14 @@ The serialization of these JSON objects are the same as at POD: the objects firs
 The file and directory metadata are encrypted with AES using the password of the related POD.
 The file itself is encrypted by the storage which must return an additional encryption key next to the file reference.
 This key and the reference is encoded in the `reference.swarm` and `fileInodeReference` properties.
+
+### Modes in metadata
+
+`mode` is the result of bitwise OR operation of file type and file permissions bits.
+
+File type represents the classification of a file based on its contents, format or structure. File types can include regular files, directories, symbolic links, sockets, and special files such as block and character devices. Default: 0100000 for regular file and 0040000 for directory. Other type can be found [here](https://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html).
+
+File permission represents read, write and execute permissions on file for user, usergroup and everyone else in form of 3 octals. Default: 0600 for file and 0700 for directory.
 
 ## Addressing
 In order to address pods, files and directories, the concept leverages the Swarm Epoch-based Feeds.
