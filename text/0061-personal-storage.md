@@ -106,7 +106,7 @@ export interface FileMetadata {
   fileSize: number
   blockSize: number // 1000000 bytes by default
   contentType: string // MIME type
-  compression: 'snappy' | 'gzip'
+  compression: '' | 'snappy' | 'gzip' // if the file is not compressed - empty
   creationTime: number
   accessTime: number
   modificationTime: number
@@ -164,6 +164,12 @@ This key and the reference is encoded in the `reference.swarm` and `fileInodeRef
 File type represents the classification of a file based on its contents, format or structure. File types can include regular files, directories, symbolic links, sockets, and special files such as block and character devices. Default: 0100000 for regular file and 0040000 for directory. Other type can be found [here](https://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html).
 
 File permission represents read, write and execute permissions on file for user, usergroup and everyone else in form of 3 octals. Default: 0600 for file and 0700 for directory.
+
+### Sharing
+
+Sharing an already uploaded file into POD must be done in a way that does not reveal the POD password. Since the metadata of the file is stored in a form encrypted with the POD password, this data must be decrypted before sharing.
+
+In order to share a file for any person, it is necessary to upload the decrypted metadata in its original form (`interface FileMetadata`) to the storage network. The ID of the uploaded metadata on the network will be the ID of the shared file. For example, for the Swarm network, this identifier would be the Encrypted Swarm Reference (128 characters long).
 
 ## Addressing
 In order to address pods, files and directories, the concept leverages the Swarm Epoch-based Feeds.
@@ -237,4 +243,3 @@ DApps can interact with the user drives (PODs) that does not expose additional i
 
 ## Copyright
 Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
