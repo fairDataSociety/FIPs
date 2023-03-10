@@ -75,7 +75,7 @@ Shared POD
 ```ts
 interface SharedPod {
   name: string
-  password: Bytes<32>
+  password: HexString
   address: EthAddress
 }
 ```
@@ -99,7 +99,7 @@ The files and folders have similar properties like Linux inodes.
 The metadata must contain all attributes that make possible to mount the personal storage to the filesystem.
 
 ```ts
-export interface FileMetadata {
+interface FileMetadata {
   version: number // default is 2
   filePath: string
   fileName: string
