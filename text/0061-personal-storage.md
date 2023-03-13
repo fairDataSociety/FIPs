@@ -75,7 +75,7 @@ Shared POD
 ```ts
 interface SharedPod {
   name: string
-  password: Bytes<32>
+  password: HexString
   address: EthAddress
 }
 ```
@@ -99,14 +99,14 @@ The files and folders have similar properties like Linux inodes.
 The metadata must contain all attributes that make possible to mount the personal storage to the filesystem.
 
 ```ts
-export interface FileMetadata {
+interface FileMetadata {
   version: number // default is 2
   filePath: string
   fileName: string
   fileSize: number
   blockSize: number // 1000000 bytes by default
   contentType: string // MIME type
-  compression: 'snappy' | 'gzip'
+  compression: '' | 'snappy' | 'gzip' // if the file is not compressed - empty
   creationTime: number
   accessTime: number
   modificationTime: number
@@ -164,6 +164,13 @@ This key and the reference is encoded in the `reference.swarm` and `fileInodeRef
 File type represents the classification of a file based on its contents, format or structure. File types can include regular files, directories, symbolic links, sockets, and special files such as block and character devices. Default: 0100000 for regular file and 0040000 for directory. Other type can be found [here](https://pubs.opengroup.org/onlinepubs/7908799/xsh/sysstat.h.html).
 
 File permission represents read, write and execute permissions on file for user, usergroup and everyone else in form of 3 octals. Default: 0600 for file and 0700 for directory.
+
+### Sharing
+
+Sharing an already uploaded file into POD must be done in a way that does not reveal the POD password. Since the metadata of the file is stored in a form encrypted with the POD password, this data must be decrypted before sharing.
+
+In order to share a file with other user, it is necessary to encrypt the original file metadata (`interface FileMetadata`) with a different encryption key and then share the ID of this encrypted metadata after upload.
+On the Swarm network, this identifier would be the Encrypted Swarm Reference (128 characters long) that consists of the Content Address and the Encryption key.
 
 ## Addressing
 In order to address pods, files and directories, the concept leverages the Swarm Epoch-based Feeds.
