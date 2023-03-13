@@ -172,6 +172,14 @@ Sharing an already uploaded file into POD must be done in a way that does not re
 In order to share a file with other user, it is necessary to encrypt the original file metadata (`interface FileMetadata`) with a different encryption key and then share the ID of this encrypted metadata after upload.
 On the Swarm network, this identifier would be the Encrypted Swarm Reference (128 characters long) that consists of the Content Address and the Encryption key.
 
+### Deletion
+
+To delete a file or directory, changes must be made to this item in two places.
+1. The Item must be removed from the `fileOrDirNames` array in the `interface Directory`.
+2. File/directory metadata must be overwritten by the "magic word" `__Fair__`.
+
+Metadata overwriting is required for file storages that do not support data deletion. By overwriting the metadata with the "magic word", the item is marked as deleted and it becomes possible to create a new item in place of the old one.
+
 ## Addressing
 In order to address pods, files and directories, the concept leverages the Swarm Epoch-based Feeds.
 
