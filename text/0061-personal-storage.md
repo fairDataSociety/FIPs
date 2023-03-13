@@ -169,7 +169,8 @@ File permission represents read, write and execute permissions on file for user,
 
 Sharing an already uploaded file into POD must be done in a way that does not reveal the POD password. Since the metadata of the file is stored in a form encrypted with the POD password, this data must be decrypted before sharing.
 
-In order to share a file for any person, it is necessary to upload the decrypted metadata in its original form (`interface FileMetadata`) to the storage network. The ID of the uploaded metadata on the network will be the ID of the shared file. For example, for the Swarm network, this identifier would be the Encrypted Swarm Reference (128 characters long).
+In order to share a file with other user, it is necessary to encrypt the original file metadata (`interface FileMetadata`) with a different encryption key and then share the ID of this encrypted metadata after upload.
+On the Swarm network, this identifier would be the Encrypted Swarm Reference (128 characters long) that consists of the Content Address and the Encryption key.
 
 ## Addressing
 In order to address pods, files and directories, the concept leverages the Swarm Epoch-based Feeds.
