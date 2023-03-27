@@ -2,7 +2,7 @@
 - title: External Account Generator
 - author: Igor Shadurin, @IgorShadurin
 - status: draft
-- created: 2023-03-20
+- created: 2023-03-27
 
 # Summary
 An External Account Generator is a mechanism for the deterministic creation of FDP accounts based on the user's existing wallet without intermediate storage of the account in the data storage.
