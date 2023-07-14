@@ -97,6 +97,7 @@ What success looks like for community growth ?
 - [ ] Collaborate with influencers in the blockchain 
 - [ ] Collaborate with open source space
 - [ ] Seek sponsorships or partnerships with related projects or companies
+- [ ] Warming up partnerships decide which can develop our community
 
 ## 8. Provide Excellent User Experience
 
