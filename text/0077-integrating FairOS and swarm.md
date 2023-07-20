@@ -17,7 +17,7 @@ This document outlines the process of integrating FairOS, a personal data space,
 
 2. **Swarm Decentralized Storage**: Swarm is a decentralized storage system that allows secure storage of sensitive data in an encrypted form. It utilizes Diffie-Hellman Key Exchange for encryption and decryption.
 
-3. **FairDataSociety ENS**: FairDataSociety ENS (Enterprise Name System) provides a portable account for public key encryption. Users' public keys (x, y) are stored in the ENS.
+3. **FairDataSociety ENS**: FairDataSociety ENS  provides a portable account for public key encryption. Users' public keys (x, y) are stored in the ENS.
 
 ** or ** 
 
