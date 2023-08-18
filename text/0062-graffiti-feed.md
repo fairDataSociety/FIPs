@@ -74,7 +74,7 @@ Both are 32 bytes that can be used directly as private key, let's choose `cpk = 
 By designing the payload of Graffiti Feed `2`, the `4` point also can be prepared for which the IAAS identifier of the CMI contributor must be stored.
 It can be the public key or ethereum address of their Personal Storage but now choosing the latter one property needs to be defined
 ```ts
-interface GraffityFeedRecord {
+interface GraffitiFeedRecord {
   iaasIdentifier: EthAddress, // 40 chars longs string without 0x prefix
 }
 ```
