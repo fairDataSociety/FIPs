@@ -2,7 +2,7 @@
 - title: FairOS and Swarm Decentralized Storage Integration
 - author: tx (@tfius)
 - status: draft
-- created: 20.7.2027
+- created: 20.7.2023
 
 # Summary
 
