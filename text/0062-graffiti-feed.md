@@ -51,7 +51,7 @@ Worth to mention, all contributions advertised in Graffiti Feed automatically pr
 ![graffiti-feed-chart](../resources/graffiti-feed.png)
 
 # Reference-level explanation
-The original idea has its implementation similar that described below in the [AnyThread project](https://github.com/anythread/anythread/)
+The original idea has its implementation similar that described below in the [AnyThread project](https://github.com/anythread/) and the concept can be tried out with the [ZeroDash JS library](https://github.com/anythread/zerodash)
 
 The IAAS currently implemented in Ethereum Swarm by Single Owner Chunks.
 The Graffiti and Personal Storage Feeds can be implemented as sequential Feeds in Swarm.
